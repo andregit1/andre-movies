@@ -4,11 +4,11 @@ import useCurrentUser from "@/hooks/useCurrentUser"
 import useFavorites from "@/hooks/useFavorites"
 import { AiOutlinePlus, AiOutlineCheck } from "react-icons/ai"
 
-interface FavoritesButtonProps {
+interface FavoriteButtonProps {
   movieId: string
 }
 
-const FavoritesButton: React.FC<FavoritesButtonProps> = ({movieId}) => {
+const FavoriteButton: React.FC<FavoriteButtonProps> = ({movieId}) => {
 
   const {mutate: mutateFavorites} = useFavorites()
   const {data: currentUser, mutate } = useCurrentUser()
@@ -64,4 +64,4 @@ const FavoritesButton: React.FC<FavoritesButtonProps> = ({movieId}) => {
   )
 }
 
-export default FavoritesButton
+export default FavoriteButton
